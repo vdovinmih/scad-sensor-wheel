@@ -65,14 +65,16 @@ module body_1() {
             translate([0, 8, 0]) cube([30,2,50], center = true);
             translate([0, 12, 0]) cube([30,2,50], center = true);
         }
-
+        
+        //отверстие для проводов датчика
+        translate([0, 13, -10]) cylinder(h=70, d=4, $fn=100);
            
         //debug
         //translate([45/2,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
         //translate([45/2 +14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
           
     };
-    //font = 'Bernard MT Condensed';
+    
 };
 
 //debug
