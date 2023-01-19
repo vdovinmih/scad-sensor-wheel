@@ -33,7 +33,7 @@ module flange() {
                 translate([-9.88 -8.8 +28, -9.5,-3])  cylinder(d1=6, d2=0,h=3, $fn=100);
                 
             };
-            translate([0,-1,25]) cylinder(h = 10, d = 19, center = true, $fn=100);
+            translate([0,-1,25]) cylinder(h = 10, d = 19, center = true, $fn=200);
             
             //отверстие для проводов датчика
             translate([0, 13, -10]) cylinder(h=70, d=4, $fn=100);

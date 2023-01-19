@@ -7,7 +7,7 @@ use <flange.scad>
 
 
 // потрошки для прицеливания и контроля корпуса.
-#translate([0,13,-24.5])
+translate([0,13,-24.5])
 union(){
     translate([0,15,30])
         rotate([90,0,0]) 
