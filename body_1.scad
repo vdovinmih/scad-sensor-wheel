@@ -67,7 +67,15 @@ module body_1() {
         }
         
         //отверстие для проводов датчика
-        translate([0, 13, -10]) cylinder(h=70, d=4, $fn=100);
+        
+        hull(){
+            translate([0, 13, -10]) cylinder(h=70, d=4, $fn=100);
+            translate([0, 12, -10]) cylinder(h=70, d=4, $fn=100);
+        };
+
+        //отверстие для ножки мотора
+        translate([0, -12.5, -10]) cylinder(h=70, d=4, $fn=100);
+
            
         //debug
         //translate([45/2,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
@@ -76,6 +84,8 @@ module body_1() {
     };
     
 };
+
+
 
 //debug
 body_1();
