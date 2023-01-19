@@ -3,6 +3,7 @@ use <motor_driver.scad>
 use <motor.scad>
 use <body_1.scad>
 use <body_2.scad>
+use <flange.scad>
 
 
 // потрошки для прицеливания и контроля корпуса.
@@ -37,7 +38,7 @@ difference() {
     // сечение по винтам 1
     //translate([45/2 +14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
     // сечение по винтам 2
-    translate([45/2 -14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
+    //translate([45/2 -14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
 };
 
 
@@ -49,8 +50,11 @@ difference() {
     // сечение по центру
     //translate([45/2,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
     // сечение по винтам 1
-    translate([45/2 +14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
+    //translate([45/2 +14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
     // сечение по винтам 2
     //translate([45/2 -14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
 
 }
+
+//фланец для трубы d32
+translate([0,-1,27]) flange();

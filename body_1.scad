@@ -49,7 +49,6 @@ module body_1() {
         union(){
             translate([-9.88 -8.8, -9.5,-10]) cylinder(d=2.5,h=30, $fn=100);
             translate([-9.88 -8.8, 9.5,-10]) cylinder(d=2.5,h=30, $fn=100);
-            translate([-9.88 -8.8, -9.5,-10]) cylinder(d=2.5,h=30, $fn=100);
             translate([-9.88 -8.8 +28, 9.5,-10]) cylinder(d=2.5,h=30, $fn=100);
             translate([-9.88 -8.8 +28, -9.5,-10]) cylinder(d=2.5,h=30, $fn=100);
         };
@@ -60,19 +59,21 @@ module body_1() {
             };
 
         //щели для вентиляции
-        translate([0, 15, 45]) union(){
+        translate([0, 18.5, 45]) union(){
             translate([0, 0, 0]) cube([30,2,50], center = true);
             translate([0, 4, 0]) cube([30,2,50], center = true);
             translate([0, 8, 0]) cube([30,2,50], center = true);
             translate([0, 12, 0]) cube([30,2,50], center = true);
         }
-            
+
+           
         //debug
         //translate([45/2,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
         //translate([45/2 +14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
           
     };
+    //font = 'Bernard MT Condensed';
 };
 
 //debug
-//body_1();
+body_1();
