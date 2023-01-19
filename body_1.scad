@@ -59,9 +59,18 @@ module body_1() {
                 sphere(2);
             };
 
+        //щели для вентиляции
+        translate([0, 15, 45]) union(){
+            translate([0, 0, 0]) cube([30,2,50], center = true);
+            translate([0, 4, 0]) cube([30,2,50], center = true);
+            translate([0, 8, 0]) cube([30,2,50], center = true);
+            translate([0, 12, 0]) cube([30,2,50], center = true);
+        }
+            
         //debug
         //translate([45/2,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
         //translate([45/2 +14,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
+          
     };
 };
 

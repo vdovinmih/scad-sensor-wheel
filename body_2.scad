@@ -43,6 +43,14 @@ module body_2() {
         translate([-14,-36.5,0]) cylinder(h = 45, d = 2.3, center = true, $fn=200);
         translate([-14,36.5,0]) cylinder(h = 45, d = 2.3, center = true, $fn=200);
 
+        //щели для вентиляции
+        translate([0, -25, -45]) union(){
+            translate([0, 0, 0]) cube([30,2,50], center = true);
+            translate([0, 4, 0]) cube([30,2,50], center = true);
+            translate([0, 8, 0]) cube([30,2,50], center = true);
+            translate([0, 12, 0]) cube([30,2,50], center = true);
+        }
+
         //debug
         //translate([45/2 -14 ,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
 
@@ -50,3 +58,5 @@ module body_2() {
     };
 
 };
+
+//body_2();
