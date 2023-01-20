@@ -1,10 +1,10 @@
-$fn=200;
-hole_sections=32; // количество дыр
+$fn=50;
+hole_sections=24; // количество дыр
 hole_coverage=50; // % заполнения дырами
 inner_r = (14 / 2) + 0.1;     // внутренний r
 inner_b = 2;      // внутренний обод
 outer_r = 28 / 2;     // наружний r 
-outer_b = 1;      // наружний обод
+outer_b = 1.2;      // наружний обод
 thickness = 2;    // толщина
 
 module holes(o_rad,i_rad,sections,coverage)
@@ -24,12 +24,11 @@ module holes(o_rad,i_rad,sections,coverage)
 }
 
 // ротор
-
 difference() {
     union()
     {
-        cylinder(h=thickness,r=outer_r);
-        cylinder(h=thickness*3,r=inner_r+1.2);
+        cylinder(h=thickness,r=outer_r,$fn=250);
+        cylinder(h=thickness*3,r=inner_r+1.2,$fn=250);
     }    
     translate ([0,0, -thickness])
         linear_extrude(height=thickness*3,convexity=10)
@@ -41,7 +40,6 @@ difference() {
     translate ([0,0, -thickness])
         cylinder(h=thickness*6,r=inner_r);
 };
-
 
 // муфта
  difference(){
