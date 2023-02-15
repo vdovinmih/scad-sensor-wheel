@@ -8,10 +8,21 @@ use <../lib/controller.scad>
 
 difference(){
     body_1();
-    translate([0,0,15.5]) motor();
+    //translate([0,0,15.5]) motor();
 }
 
+
 //cylinder(h=32,d=10,center=true);
+
+// Square hole
+// Sx=Square X position | Sy=Square Y position | Sl= Square Length | Sw=Square Width | Filet = Round corner
+module SquareHole(Sx, Sy, Sl, Sw, Filet) {
+    minkowski() {
+        translate([Sx+Filet/2, Sy+Filet/2, -1])
+            cube([Sl-Filet, Sw-Filet, 10]);
+            cylinder(d=Filet, h=10, $fn=100);
+    }
+}
 
 module body_1() {
     $fn=50;
@@ -37,7 +48,6 @@ module body_1() {
             translate([27,-24,0]) cylinder(h = 32, d = 4, center = true, $fn=10);
             translate([-27,24,0]) cylinder(h = 32, d = 4, center = true, $fn=10);
             translate([-27,-24,0]) cylinder(h = 32, d = 4, center = true, $fn=10);
-
         };
         //половиним корпус
         translate([0,0,-55/2]) color([.9,.3,.1]) cube([90,95,55], center = true);
@@ -45,6 +55,9 @@ module body_1() {
         //отверстие под вал мотор-редуктора
         //translate([0,-1,25]) cylinder(h = 10, d = 9, center = true);
 
+        //отверстие под разъем питания
+        translate([20, -13.6, -5]) rotate([90, 0, 90])
+            SquareHole(0, 0, 12.5, 10, 1);
 
         //отверстия под головки винтов крепления половинок корпуса
         translate([24,21,48/2 + 4.749]) cylinder(h = 48, d = 7, center = true);
@@ -116,6 +129,16 @@ module body_1() {
         //translate([24,0,0]) translate([45/2,0,0]) color([.9,.3,.1]) cube([45,95,55], center = true);
           
     };
-    
+    // Rails
+    translate([-28, -16.5, 14.2]) cube([56, 5, 2]);
+    translate([-28, -16.5, 13.2]) cube([56, 1.6, 1.6]);
+    translate([-28, -13.1, 13.2]) cube([56, 1.6, 1.6]);
+    translate([-29, -16.5, 12.2]) cube([8.5, 5, 3]);
+    translate([-29, -16.5, 12.2]) cube([11, 1.5, 3]);
+    translate([-29, -13.0, 12.2]) cube([11, 1.5, 3]);
+    translate([ 18, -16.5, 12.2]) cube([10, 1.5, 3]);
+    translate([ 18, -13.0, 12.2]) cube([10, 1.5, 3]);
+
+    translate([ 0, 0, 17.5]) cube([58,52,0.15], center = true);
 };
 
