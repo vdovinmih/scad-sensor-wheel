@@ -14,7 +14,7 @@ difference(){
 }
 
 difference(){
-    translate([0,0,36]) screw();
+    translate([0,0,36]) screw(h=75,n=3,k=360*1.8,hh=10);
     translate([-45/2,0,100]) color([.9,.3,.1]) cube([45,95,200], center = true);
 }
 
@@ -25,7 +25,7 @@ difference(){
                 sensor_wheel();
                 clutch();
             }
-    translate([-45/2,0,0]) color([.9,.3,.1]) cube([45,95,200], center = true);
+    //translate([-45/2,0,0]) color([.9,.3,.1]) cube([45,95,200], center = true);
 }
 
 //#translate([0,0,15.5]) motor();

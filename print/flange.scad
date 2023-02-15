@@ -4,8 +4,8 @@ module flange(print=true) {
     $fn=50;
     union(){
         difference(){
-            translate([0, 0, 15+0.1]) cylinder(h = 30-0.3, d = 35, center = true, $fn=200);
-            translate([0, 0, 40]) cylinder(h = 80, d = 32, center = true, $fn=200);
+            translate([0, 0, 15+0.1]) cylinder(h = 30-0.3, d = 35+0.43, center = true, $fn=200);
+            translate([0, 0, 40]) cylinder(h = 80, d = 32+0.63, center = true, $fn=200);
             //отверстие в трубе для датчика
             rotate([0,0,75])
             union(){
@@ -98,8 +98,8 @@ module flange_holes() {
 
 };
 
-flange();
-#flange_holes();
+flange(print=false);
+//#flange_holes();
 //translate([0,30,0]) cylinder(h=2.5,d=10);
 //rotate([0,0,75]) translate([0,20,0]) cylinder(h=2.5+7.5,d=10);
 //rotate([0,0,180]) motor();
