@@ -99,7 +99,7 @@ module flange_holes() {
 };
 
 flange(print=false);
-//#flange_holes();
+// flange_holes();
 //translate([0,30,0]) cylinder(h=2.5,d=10);
 //rotate([0,0,75]) translate([0,20,0]) cylinder(h=2.5+7.5,d=10);
 //rotate([0,0,180]) motor();
