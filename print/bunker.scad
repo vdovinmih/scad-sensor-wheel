@@ -28,7 +28,7 @@ module bunker(){
         
         }
         
-        translate([0,150,0]) color("red") cube(300, center=true);
+        //translate([0,150,0]) color("red") cube(300, center=true);
     }
 }
 

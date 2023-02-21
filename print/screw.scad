@@ -6,7 +6,7 @@ difference(){
     //translate([-45/2,0,100]) color([.9,.3,.1]) cube([45,95,200], center = true);
 }
 
-module screw(h=70,d1=10,d2=26,n=3,k=360,hh=15){
+module screw(h=70,d1=10,d2=26,n=3,k=360*1.8,hh=15){
     translate([0,0,hh])
     difference(){
         union(){

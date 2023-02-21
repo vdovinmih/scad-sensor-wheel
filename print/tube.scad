@@ -20,3 +20,7 @@ module tube(){
 }
 
 tube();
+difference(){
+    translate([0,0,125]) cylinder(h=2,d=36, $fn=100);
+    translate([0,0,-10]) cylinder(h=200,d=32.3-4,$fn=100);
+}

@@ -18,7 +18,7 @@ union(){
     if(1) difference(){
         translate([0,-32/2-5,27.2+32.3/2 + 20.3])
             rotate([90,0,0]) bunker();
-        translate([-90/2,0,50]) color([.9,.3,.1]) cube([90,300,200], center = true);
+        //translate([-90/2,0,50]) color([.9,.3,.1]) cube([90,300,200], center = true);
     }
     
     //tube
@@ -36,7 +36,7 @@ union(){
     //screw
     if(1) difference(){
         translate([0,0,36]) screw();
-        translate([-45/2,0,100]) color([.9,.3,.1]) cube([45,95,200], center = true);
+        //translate([45/2,0,100]) color([.9,.3,.1]) cube([45,95,200], center = true);
     }
 
     if(1) difference(){
