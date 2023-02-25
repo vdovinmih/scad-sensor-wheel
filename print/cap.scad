@@ -1,4 +1,4 @@
-include<lib/ISOThreadUM2.scad>
+include<../lib/ISOThreadUM2.scad>
 
 $fn=200;
 //cylinder(h=25,d=9.5);
