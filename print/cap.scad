@@ -26,10 +26,10 @@ translate([0,0,13.5])
 difference(){
     union(){
         difference(){
-            translate([0,0,0]) cylinder(h=4,d=17.8, $fn=6);
+            translate([0,0,0]) cylinder(h=5,d=17.8, $fn=6);
             translate([0,0,-1])cylinder(h=14,d=10+0.1);
         }
-        translate([0,0,0.1])    thread_in_pitch(10,4,1.5);
+        translate([0,0,0.1])    thread_in_pitch(10,5.5,1.5);
     }
     //translate([-10,0,10-0.1]) color("red") cube([20,40,20], center=true);
 }
