@@ -17,11 +17,11 @@ module bunker(){
         }
 
         union(){
-            translate([0,0,10]) cylinder(h=30,d=27.5+3,center=true);
+            translate([0,0,10]) cylinder(h=30,d=27.5+3+0.8,center=true);
             hull(){
-                translate([0,0,21]) cylinder(h=20,d=27.5+3,center=true);
+                translate([0,0,20]) cylinder(h=20,d=27.5+3,center=true);
                 minkowski(){
-                    translate([0,0,100+1]) cube([120-4,120-4,40],center=true);
+                    translate([0,0,100]) cube([120-1.6*2,120-1.6*2,40],center=true);
                     cylinder(d=20);
                 };
             }
@@ -29,7 +29,11 @@ module bunker(){
         }
         
         //translate([0,150,0]) color("red") cube(300, center=true);
+        translate([0,90,0]) color("red") cube(300, center=true);
     }
 }
 
-bunker();
+union(){
+    bunker();
+    translate([0,0,121]) cube([140,140,0.1],center=true);
+}
