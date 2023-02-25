@@ -16,20 +16,20 @@ difference(){
             }
             translate([0,0,-1])cylinder(h=14,d=10+0.1, $fn=100);
         }
-        translate([0,0,0.1])    thread_in_pitch(10,12,0.7);
+        translate([0,0,0.1])    thread_in_pitch(10,12,1.5);
     }
     //translate([-10,0,10-0.1]) color("red") cube([20,40,20], center=true);
 }
 
 if(1) //nut
-translate([0,0,12.6])
+translate([0,0,13.5])
 difference(){
     union(){
         difference(){
             translate([0,0,0]) cylinder(h=4,d=17.8, $fn=6);
             translate([0,0,-1])cylinder(h=14,d=10+0.1);
         }
-        translate([0,0,0.1])    thread_in_pitch(10,4,0.7);
+        translate([0,0,0.1])    thread_in_pitch(10,4,1.5);
     }
     //translate([-10,0,10-0.1]) color("red") cube([20,40,20], center=true);
 }
@@ -38,8 +38,8 @@ difference(){
 if(1) //axis
 difference(){
     union(){
-        translate([0,0,-1])cylinder(h=25,d=10-0.65);
-        translate([0,0,0.1])    thread_out_pitch(10+0.1,23,0.7);
+        translate([0,0,-1])cylinder(h=25,d=10-1.5);
+        translate([0,0,0.1])    thread_out_pitch(10+0.1,23,1.5);
         translate([0,0,24-0.01]) cylinder(h=4, d1=8,d2=0);
         
     }
