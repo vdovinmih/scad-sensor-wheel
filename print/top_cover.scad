@@ -14,9 +14,9 @@ union(){
             cylinder(d=20);
         };
     }
-    translate([0,0,10])
+    translate([0,0,10-0.5])
     minkowski(){
-        translate([0,0,100 + 22 - 0.1]) cube([120-1.6*0,120-1.6*0,2],center=true);
+        translate([0,0,100 + 22 - 0.1]) cube([120-1.6*0,120-1.6*0,1.6],center=true);
         cylinder(d=20);
     };
 
