@@ -17,7 +17,7 @@ union(){
     translate([0,0,10-0.5])
     minkowski(){
         translate([0,0,100 + 22 - 0.1]) cube([120-1.6*0,120-1.6*0,1.6],center=true);
-        cylinder(d=20);
+        cylinder(d=20,h=0.001);
     };
 
 
