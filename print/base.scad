@@ -53,5 +53,8 @@ difference(){
         }
 
     }
-    bunker();
+    translate([60,60,20]) cylinder(h=140,d=10,center=true);
+    translate([60,-60,20]) cylinder(h=140,d=10,center=true);
+    translate([-60,60,20]) cylinder(h=140,d=10,center=true);
+    translate([-60,-60,20]) cylinder(h=140,d=10,center=true);
 }
